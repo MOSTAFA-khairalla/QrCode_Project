@@ -1,0 +1,42 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    @using (Ajax.BeginForm("Search", " Default", new AjaxOptions { UpdateTargetId = "mydiv" }))
+    {
+
+        <input type="text" name="x" />
+        <br />
+        <input type="submit" value="Get_Data" />
+
+    }
+
+        <div id="mydiv">
+            @foreach (var item in Model)
+            {
+                <tr class="row100">
+                    <td class="column100 column1" data-column="column1">@item.ID</td>
+                    <td class="column100 column2" data-column="column2">@item.Student_name</td>
+                    <td class="column100 column3" data-column="column3">@item.PhotoUrl</td>
+
+                    <td class="column100 column3" data-column="column3">@item.Student_password</td>
+
+
+                </tr>
+            }
+
+
+        </div>
+    <script src="~/jquery-3.3.1.js"></script>
+    <script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
+</body>
+</html>

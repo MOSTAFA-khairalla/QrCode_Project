@@ -1,0 +1,173 @@
+﻿@model WebApplication12.Models.Docter
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login V1</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="~/query form docter and s/Login_v1/images/icons/favicon.ico" />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/query form docter and s/Login_v1/vendor/bootstrap/css/bootstrap.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/query form docter and s/Login_v1/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/query form docter and s/Login_v1/vendor/animate/animate.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/query form docter and s/Login_v1/vendor/css-hamburgers/hamburgers.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/query form docter and s/Login_v1/vendor/select2/select2.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/query form docter and s/Login_v1/css/util.css">
+    <link href="~/query form docter and s/Login_v1/css/main.css" rel="stylesheet" />
+    <!--===============================================================================================-->
+    <link href="~/Students_loginquery/enno/css/normalize.css" rel="stylesheet" />
+    <link href="~/Students_loginquery/enno/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="~/Students_loginquery/enno/css/jquery.bxslider.css">
+    <link href="~/Students_loginquery/enno/css/overwrite.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="~/Students_loginquery/enno/css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="~/Students_loginquery/enno/css/demo.css" />
+    <link rel="stylesheet" type="text/css" href="~/Students_loginquery/enno/css/set1.css" />
+    <link href="~/Students_loginquery/enno/css/style.css" rel="stylesheet">
+    <link href="~/Students_loginquery/css/bootstrap-theme.css" rel="stylesheet" />
+    <style>
+        .navbar-fixed-top {
+            top: 0;
+            border-width: 0 0 0;
+            background-color: #0b1311;
+        }
+    </style>
+
+
+</head>
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <center>
+            <div class="container" style="background-color:#032f3e">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse.collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+                <div class="navbar-collapse collapse">
+                    <div class="menu">
+                        <ul class="nav nav-tabs" role="tablist">
+
+                            <li role="presentation"><a href="/CRUD/log" style="font-size:25px; font-weight:bold">استعلام دكتور </a></li>
+                      
+                            <li role="presentation"><a href="/VenueLanding/index.html" style="font-size:25px; font-weight:bold"> <strong> الرئيسه </strong> </a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </center>
+    </nav>
+
+    <br />
+    <div class="limiter">
+
+
+        <div class="container-login100">
+
+            <br />
+            <br />
+            <div class="wrap-login100">
+                <div class="login100-pic js-tilt" data-tilt>
+                    <img src="~/images/logo.png" alt="IMG">
+                </div>
+
+
+                <div class="login100-form validate-form" data-wow-delay=".5s">
+                    @using (Html.BeginForm("log", "CRUD", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                    {
+                        <span class="login100-form-title">
+                            أستعلام عن الغياب
+                        </span>
+                        <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
+                            @Html.TextBoxFor(a => a.UserName, new { @class = "input100", @placeholder = "  من فضلك ادخل الاسم كامل   ", required = "required" })
+                            <span class="focus-input100"></span>
+                            <span class="symbol-input100">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                            </span>
+
+                        </div>
+                        <div class="wrap-input100 validate-input" data-validate="Password is required">
+
+                            @Html.PasswordFor(a => a.Password, new { @class = "input100", @placeholder = "من فضلك ادخل الرقم السري", required = "required" }) ;
+                            <span class="focus-input100"></span>
+                            <span class="symbol-input100">
+                                <i class="fa fa-lock" aria-hidden="true"></i>
+                            </span>
+
+                        </div>
+                        <div class="container-login100-form-btn">
+
+                            <input type="submit" class="login100-form-btn" value="تسجيل " style="font-size:25px; font-weight:bold" />
+                          
+                        </div>
+
+                        <div class="text-center p-t-12">
+                            @*<span class="txt1">
+                                    نسيان الرقم السري
+                                </span>*@
+
+                        </div>
+
+                    }
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--===============================================================================================-->
+    <script src="~/Students_loginquery/enno/vendor/jquery/jquery-3.2.1.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/Students_loginquery/enno/vendor/bootstrap/js/popper.js"></script>
+    <script src="~/Students_loginquery/enno/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/Students_loginquery/enno/vendor/select2/select2.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/Students_loginquery/enno/js/main.js"></script>
+    <script src="~/Students_loginquery/enno/js/jquery-2.1.1.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="~/Students_loginquery/enno/js/bootstrap.min.js"></script>
+    <script src="~/Students_loginquery/enno/js/wow.min.js"></script>
+    <script src="~/Students_loginquery/enno/js/jquery.easing.1.3.js"></script>
+    <script src="~/Students_loginquery/enno/js/jquery.isotope.min.js"></script>
+    <script src="~/Students_loginquery/enno/js/jquery.bxslider.min.js"></script>
+    <script type="text/javascript" src="~/Students_loginquery/enno/js/fliplightbox.min.js"></script>
+    <script src="~/Students_loginquery/enno/js/functions.js"></script>
+    <script type="text/javascript">$('.portfolio').flipLightBox()</script>
+    <!--===============================================================================================-->
+    <script src="~/query form docter and s/Login_v1/vendor/jquery/jquery-3.2.1.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/query form docter and s/Login_v1/vendor/bootstrap/js/popper.js"></script>
+    <script src="~/query form docter and s/Login_v1/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/query form docter and s/Login_v1/vendor/select2/select2.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/query form docter and s/Login_v1/vendor/tilt/tilt.jquery.min.js"></script>
+    <script>
+        $('.js-tilt').tilt({
+            scale: 1.1
+        })
+    </script>
+    <!--===============================================================================================-->
+
+
+</body>
+</html>

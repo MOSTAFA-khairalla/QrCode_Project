@@ -1,0 +1,137 @@
+﻿@model List<WebApplication12.Models.Student>
+@{
+    /**/
+
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>display</title>
+
+
+    <link rel="icon" type="image/png" href="~~/floderscrud/images/icons/favicon.ico" />
+
+    <!--===============================================================================================-->
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/floderscrud/vendor/bootstrap/css/bootstrap.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/floderscrud/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/floderscrud/vendor/animate/animate.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/floderscrud/vendor/select2/select2.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/floderscrud/vendor/perfect-scrollbar/perfect-scrollbar.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/floderscrud/css/util.css">
+    <link rel="stylesheet" type="text/css" href="~/floderscrud/css/main.css">
+
+    <style>
+
+        th {
+            text-align: center;
+        }
+
+        tr td {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <center>
+
+
+
+        <div class="limiter">
+            <div class="container-table100">
+                <div class="wrap-table100">
+                    <div class="table100 ver1 m-b-110">
+                        <table data-vertable="ver1">
+                            <thead>
+                                <tr class="row100 head">
+                                    <th> <p style="font-size:30px">  رقم التسجيل في المحاضره </p>  </th>
+                                    <th> <p style="font-size:30px"> اسم الطالب </p>  </th>
+                                  
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                <tr class="row100">
+                                    <td class="column100 column2" data-column="column2">@item.ID</td>
+                                    <td class="column100 column2" data-column="column2">@item.Student_name</td>
+                                 
+                                 
+
+
+                                    </tr>
+                                }
+
+                            </tbody>
+                        </table>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </center>
+
+    <script src="~/floderscrud/vendor/jquery/jquery-3.2.1.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/floderscrud/vendor/bootstrap/js/popper.js"></script>
+    <script src="~/floderscrud/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/floderscrud/vendor/select2/select2.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/floderscrud/js/main.js"></script>
+
+</body>
+</html>
